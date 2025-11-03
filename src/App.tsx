@@ -46,7 +46,6 @@ export default function PersonalityTestLanding() {
       <div className="content-wrapper">
         {/* Header */}
         <div className="header">
-          {/* Title Design Image - Replace with your stylized title image */}
           <div className="title-image-container">
             <img
               src="/image.png"
