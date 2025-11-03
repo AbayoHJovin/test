@@ -5,38 +5,42 @@ export default function PersonalityTestLanding() {
   const categories = [
     {
       color: "#A478E9",
+      bgColor: "#E8E0F8",
       items: [
-        { name: "マジメガ", bgColor: "#E8E0F8", image: "/purple.png" },
-        { name: "モテワクワク", bgColor: "#E8E0F8", image: "/purple.png" },
-        { name: "リベンリュウ", bgColor: "#E8E0F8", image: "/purple.png" },
-        { name: "まぜらせっこ", bgColor: "#E8E0F8", image: "/purple.png" },
+        { name: "マンジャロ", image: "/purple.png" },
+        { name: "ゼップバウンド", image: "/purple.png" },
+        { name: "リベルサス", image: "/purple.png" },
+        { name: "オゼンピック", image: "/purple.png" },
       ],
     },
     {
       color: "#F377B5",
+      bgColor: "#FFE8F3",
       items: [
-        { name: "ライジース", bgColor: "#FFE8F3", image: "/pink.png" },
-        { name: "スープル", bgColor: "#FFE8F3", image: "/pink.png" },
-        { name: "ゲルマリウス", bgColor: "#FFE8F3", image: "/pink.png" },
-        { name: "ルブダル", bgColor: "#FFE8F3", image: "/pink.png" },
+        { name: "フォシーガ", image: "/pink.png" },
+        { name: "スーグラ", image: "/pink.png" },
+        { name: "ジャディアンス", image: "/pink.png" },
+        { name: "カナグル", image: "/pink.png" },
       ],
     },
     {
       color: "#2FB6AE",
+      bgColor: "#E0F5F3",
       items: [
-        { name: "陽津津ガ", bgColor: "#E0F5F3", image: "/green.png" },
-        { name: "アルカポーン", bgColor: "#E0F5F3", image: "/green.png" },
-        { name: "グドガドビ", bgColor: "#E0F5F3", image: "/green.png" },
-        { name: "グミラギ青参", bgColor: "#E0F5F3", image: "/green.png" },
+        { name: "韓国漢方", image: "/green.png" },
+        { name: "アカルボース", image: "/green.png" },
+        { name: "メトホルミン", image: "/green.png" },
+        { name: "ダイエット点滴", image: "/green.png" },
       ],
     },
     {
       color: "#EFB61B",
+      bgColor: "#FFF8E5",
       items: [
-        { name: "タイプ名", bgColor: "#FFF8E5", image: "/yellow.png" },
-        { name: "タイプ名", bgColor: "#FFF8E5", image: "/yellow.png" },
-        { name: "タイプ名", bgColor: "#FFF8E5", image: "/yellow.png" },
-        { name: "タイプ名", bgColor: "#FFF8E5", image: "/yellow.png" },
+        { name: "脂肪溶解注射", image: "/yellow.png" },
+        { name: "脂肪冷却", image: "/yellow.png" },
+        { name: "レーザー/ハイフ", image: "/yellow.png" },
+        { name: "EMS", image: "/yellow.png" },
       ],
     },
   ];
@@ -65,39 +69,98 @@ export default function PersonalityTestLanding() {
 
           {/* Description Text */}
           <div className="description-text">
-            ここに簡単の入ります 🎵
-            <br />
-            ここに簡単の入ります！ここに詳細の入入
-            <br />
-            りますここに説明書が入ります
+            ここに説明文が入ります
+            ここに説明文が入りますここに説明文が入りますここに説明文が入ります
           </div>
 
           {/* Start Button */}
-          <button className="start-button">今すぐ診断スタート →</button>
+          <button className="start-button">
+            <span className="button-text">今すぐ診断スタート</span>
+            <span className="button-arrow">&gt;</span>
+          </button>
         </div>
 
-        {/* Type Section Header */}
+        {/* Type Section Header with Ribbon Banner */}
         <div className="section-header">
-          <div className="type-banner">
-            <div className="banner-decoration banner-decoration-left"></div>
-            <div className="banner-decoration banner-decoration-right"></div>
-            タイプ
+          <div className="ribbon-container">
+            <svg
+              className="ribbon-banner"
+              viewBox="0 0 400 80"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <defs>
+                <filter
+                  id="shadow"
+                  x="-50%"
+                  y="-50%"
+                  width="200%"
+                  height="200%"
+                >
+                  <feDropShadow
+                    dx="0"
+                    dy="2"
+                    stdDeviation="3"
+                    floodOpacity="0.3"
+                  />
+                </filter>
+              </defs>
+
+              {/* Main ribbon body */}
+              <path
+                d="M 50 15 L 350 15 L 380 15 L 390 40 L 380 65 L 350 65 L 50 65 L 20 65 L 10 40 L 20 15 Z"
+                fill="#F377B5"
+                stroke="#C85A92"
+                strokeWidth="2"
+                filter="url(#shadow)"
+              />
+
+              {/* Left ribbon tail */}
+              <path
+                d="M 50 15 L 20 15 L 5 25 L 20 30 L 20 50 L 5 55 L 20 65 L 50 65 L 40 52 L 50 40 L 40 28 Z"
+                fill="#F377B5"
+                stroke="#C85A92"
+                strokeWidth="2"
+                filter="url(#shadow)"
+              />
+
+              {/* Right ribbon tail */}
+              <path
+                d="M 350 15 L 380 15 L 395 25 L 380 30 L 380 50 L 395 55 L 380 65 L 350 65 L 360 52 L 350 40 L 360 28 Z"
+                fill="#F377B5"
+                stroke="#C85A92"
+                strokeWidth="2"
+                filter="url(#shadow)"
+              />
+
+              {/* Text */}
+              <text
+                x="200"
+                y="48"
+                fontFamily="sans-serif"
+                fontSize="28"
+                fontWeight="bold"
+                fill="white"
+                textAnchor="middle"
+              >
+                16タイプ
+              </text>
+            </svg>
           </div>
+
+          {/* Pink border container */}
+          <div className="types-border-container"></div>
         </div>
 
-        {/* Categories Grid */}
         <div className="categories-container">
           {categories.map((category, categoryIndex) => (
             <div key={categoryIndex} className="category-section">
               <div className="cards-grid">
                 {category.items.map((item, itemIndex) => (
-                  <div
-                    key={itemIndex}
-                    className="type-card"
-                    style={{ backgroundColor: item.bgColor }}
-                  >
-                    {/* Character Image */}
-                    <div className="card-character">
+                  <div key={itemIndex} className="type-card">
+                    <div
+                      className="card-character"
+                      style={{ backgroundColor: category.bgColor }}
+                    >
                       <img
                         src={item.image}
                         alt={item.name}
@@ -105,7 +168,7 @@ export default function PersonalityTestLanding() {
                       />
                     </div>
 
-                    {/* Type Name Badge */}
+                    {/* Type Name Badge with colored background */}
                     <div
                       className="type-name-badge"
                       style={{ backgroundColor: category.color }}
@@ -124,6 +187,11 @@ export default function PersonalityTestLanding() {
                   </div>
                 ))}
               </div>
+
+              {/* Horizontal divider line after each category except the last */}
+              {categoryIndex < categories.length - 1 && (
+                <div className="category-divider"></div>
+              )}
             </div>
           ))}
         </div>
