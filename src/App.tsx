@@ -49,7 +49,7 @@ export default function PersonalityTestLanding() {
           {/* Title Design Image - Replace with your stylized title image */}
           <div className="title-image-container">
             <img
-              src="/title-design.png"
+              src="/image.png"
               alt="メディカルダイエット 16タイプ診断"
               className="title-design-image"
             />
